@@ -58,7 +58,7 @@
             });
 
 
-            document.getElementById("inputNamaPanggilan").addEventListener("input", function(){
+            document.getElementById("inputNamaPanggilan").addEventListener("input", function(){  // event jumlah karakter
               const jumKar = document.getElementById("inputNamaPanggilan").value.length;
               const maxKar = document.getElementById("inputNamaPanggilan").maxLength;
               console.log(jumKar,maxKar);
@@ -66,7 +66,7 @@
               document.getElementById("sisaKarakter").innerText = sisa;
 
               if(sisa == 0){
-                document.getElementById("sisaKarakter").innerText = "batas maksimum tercapai";
+                document.getElementById("sisaKarakter").innerText = "batas maksimum tercapai"; //  jika sisa == 0 
               }else if(sisa <= 5){
                 document.getElementById("notifikasiSisaKarakter").style.color =" red";
               }else {
@@ -77,11 +77,11 @@
             });
 
 
-           document.getElementById("inputNamaPanggilan").addEventListener("focus", function(){
+           document.getElementById("inputNamaPanggilan").addEventListener("focus", function(){  // menambahkan even focus
         document.getElementById("notifikasiSisaKarakter").style.visibility = null;
     });
 
-           document.getElementById("inputCaptcha").addEventListener("change", function(){
+           document.getElementById("inputCaptcha").addEventListener("change", function(){  // event input captcha
             const inputCaptcha = document.getElementById("inputCaptcha").value;
             const submitButtonStatus = document.getElementById("submitButton");
 
@@ -91,7 +91,7 @@
 
            });
 
-             document.getElementById("formDataDiri").addEventListener("submit", function(){
+             document.getElementById("formDataDiri").addEventListener("submit", function(){  // event input captcha
                   const inputCap = document.getElementById("inputCaptcha").value;
 
                   if(inputCap == "PRNU"){
@@ -105,13 +105,13 @@
 
            });
 
-              document.getElementById("inputCopy").addEventListener("copy", function(){
+              document.getElementById("inputCopy").addEventListener("copy", function(){ // event copy
 
                 alert('anda telah mengcopy text hello world');
              });
 
                    document.getElementById("inputPaste").addEventListener("paste" , function(){
-                alert('anda telah paste text hello world');
+                alert('anda telah paste text hello world');                                     // event paste
              });
 
            
