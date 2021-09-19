@@ -64,8 +64,18 @@
            document.getElementById("inputNamaPanggilan").addEventListener("focus", function(){
         document.getElementById("notifikasiSisaKarakter").style.visibility = null;
     });
+
+            document.getElementById("inputCaptcha").addEventListener("change", function(){
+            const inputCaptcha = document.getElementById("inputCaptcha").value;
+            const submitButtonStatus = document.getElementById("submitButton");
+
+                 if (inputCaptcha == "PRNU"){
+            submitButtonStatus.removeAttribute("disabled");
+        }
+
+           });
         </script>
             </body>
 </html>
 </body>
-</html>
+</html
