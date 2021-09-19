@@ -80,7 +80,7 @@
            document.getElementById("inputNamaPanggilan").addEventListener("focus", function(){
         document.getElementById("notifikasiSisaKarakter").style.visibility = null;
     });
-           
+
            document.getElementById("inputCaptcha").addEventListener("change", function(){
             const inputCaptcha = document.getElementById("inputCaptcha").value;
             const submitButtonStatus = document.getElementById("submitButton");
@@ -90,6 +90,22 @@
         }
 
            });
+
+             document.getElementById("formDataDiri").addEventListener("submit", function(){
+                  const inputCap = document.getElementById("inputCaptcha").value;
+
+                  if(inputCap == "PRNU"){
+                    event.preventDefault();
+                    alert('selamat captcha anda lolos verifikasi !!');
+
+                  }else {
+                    alert('masih salah coba kembali ya !!');
+                    submitButtonStatus.addAttribute("disabled",true);
+                  }
+
+           });
+           
+
 
 
         </script>
